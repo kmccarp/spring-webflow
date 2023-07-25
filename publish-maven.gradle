@@ -5,7 +5,7 @@ publishing {
   publications {
     mavenJava(MavenPublication) {
       from components.java
-      if (project.name != 'spring-js-resources') {
+      if (!'spring-js-resources'.equals(project.name)) {
         artifact sourcesJar
         artifact javadocJar
       }

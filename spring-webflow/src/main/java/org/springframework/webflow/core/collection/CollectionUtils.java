@@ -27,7 +27,7 @@ import java.util.List;
  * @author Keith Donald
  * @author Erwin Vervaet
  */
-public class CollectionUtils {
+public final class CollectionUtils {
 
 	/**
 	 * The shared, singleton empty iterator instance.
@@ -93,10 +93,10 @@ public class CollectionUtils {
 		}
 	}
 
-	/**
-	 * Iterator iterating over no elements (hasNext() always returns false).
-	 */
-	private static class EmptyIterator<E> implements Iterator<E>, Serializable {
+    /**
+     * Iterator iterating over no elements (hasNext() always returns false).
+     */
+    private static final class EmptyIterator<E> implements Iterator<E>, Serializable {
 
 		private EmptyIterator() {
 		}

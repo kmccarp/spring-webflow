@@ -28,26 +28,26 @@ import org.springframework.util.Assert;
  */
 class FlowLocation {
 
-	/**
-	 * The id to assign to the flow definition.
-	 */
-	private String id;
+    /**
+     * The id to assign to the flow definition.
+     */
+    private final String id;
 
-	/**
-	 * The string-encoded path to the flow definition file resource.
-	 */
-	private String path;
+    /**
+     * The string-encoded path to the flow definition file resource.
+     */
+    private final String path;
 
-	/**
-	 * Attributes to assign to the flow definition.
-	 */
-	private Set<FlowElementAttribute> attributes;
+    /**
+     * Attributes to assign to the flow definition.
+     */
+    private final Set<FlowElementAttribute> attributes;
 
 	public FlowLocation(String id, String path, Set<FlowElementAttribute> attributes) {
 		Assert.hasText(path, "The path is required");
 		this.id = id;
 		this.path = path;
-		this.attributes = (attributes != null ? attributes : Collections.emptySet());
+		this.attributes = attributes != null ? attributes : Collections.emptySet();
 	}
 
 	public String getId() {

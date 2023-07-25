@@ -29,10 +29,10 @@ import org.springframework.util.Assert;
  */
 public class CollectionAddingExpression implements Expression {
 
-	/**
-	 * The expression that resolves a mutable collection reference.
-	 */
-	private Expression collectionExpression;
+    /**
+     * The expression that resolves a mutable collection reference.
+     */
+    private final Expression collectionExpression;
 
 	/**
 	 * Creates a collection adding property expression.

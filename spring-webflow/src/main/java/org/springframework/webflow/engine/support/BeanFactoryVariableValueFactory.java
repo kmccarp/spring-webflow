@@ -28,15 +28,15 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class BeanFactoryVariableValueFactory implements VariableValueFactory {
 
-	/**
-	 * The class of variable value. Typically a Java bean.
-	 */
-	private Class<?> type;
+    /**
+     * The class of variable value. Typically a Java bean.
+     */
+    private final Class<?> type;
 
-	/**
-	 * The backing bean factory that will create and restore variable instances.
-	 */
-	private AutowireCapableBeanFactory beanFactory;
+    /**
+     * The backing bean factory that will create and restore variable instances.
+     */
+    private final AutowireCapableBeanFactory beanFactory;
 
 	/**
 	 * Creates a new bean factory variable factory.

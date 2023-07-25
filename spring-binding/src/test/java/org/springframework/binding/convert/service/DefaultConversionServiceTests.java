@@ -555,7 +555,7 @@ public class DefaultConversionServiceTests {
 	private static class CustomConverter implements Converter {
 
 		public Object convertSourceToTargetClass(final Object source, Class<?> targetClass) throws Exception {
-			return (Principal) () -> (String) source;
+			return (Principal) String.class::cast;
 		}
 
 		public Class<?> getSourceClass() {

@@ -31,10 +31,10 @@ import org.springframework.webflow.engine.model.FlowModel;
  */
 public class FlowModelRegistryImpl implements FlowModelRegistry, FlowModelHolderLocator {
 
-	/**
-	 * The map of loaded Flow models maintained in this registry.
-	 */
-	private Map<String, FlowModelHolder> flowModels;
+    /**
+     * The map of loaded Flow models maintained in this registry.
+     */
+    private final Map<String, FlowModelHolder> flowModels;
 
 	/**
 	 * An optional parent flow model registry.
