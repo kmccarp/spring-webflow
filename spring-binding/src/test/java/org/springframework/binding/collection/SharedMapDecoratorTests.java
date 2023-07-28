@@ -33,8 +33,8 @@ import org.junit.jupiter.api.Test;
  */
 public class SharedMapDecoratorTests {
 
-	private SharedMapDecorator<String, String> map = new SharedMapDecorator<>(
-			new HashMap<>());
+	private final SharedMapDecorator<String, String> map = new SharedMapDecorator<>(
+new HashMap<>());
 
 	@Test
 	public void testGetPutRemove() {

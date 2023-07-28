@@ -43,17 +43,17 @@ public class ViewState extends TransitionableState {
 	/**
 	 * The list of actions to be executed before the view is rendered.
 	 */
-	private ActionList renderActionList = new ActionList();
+	private final ActionList renderActionList = new ActionList();
 
 	/**
 	 * A factory for creating and restoring the view rendered by this view state.
 	 */
-	private ViewFactory viewFactory;
+	private final ViewFactory viewFactory;
 
 	/**
 	 * The set of view variables created by this view state.
 	 */
-	private Map<String, ViewVariable> variables = new LinkedHashMap<>();
+	private final Map<String, ViewVariable> variables = new LinkedHashMap<>();
 
 	/**
 	 * Whether or not a redirect should occur before the view is rendered.
