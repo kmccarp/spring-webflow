@@ -35,21 +35,21 @@ class FlowBuilderInfo {
 	 */
 	private String id;
 
-	/**
-	 * The fully-qualified flow builder implementation class.
-	 */
-	private String className;
+    /**
+     * The fully-qualified flow builder implementation class.
+     */
+    private final String className;
 
-	/**
-	 * Attributes to assign to the flow definition.
-	 */
-	private Set<FlowElementAttribute> attributes;
+    /**
+     * Attributes to assign to the flow definition.
+     */
+    private final Set<FlowElementAttribute> attributes;
 
 	public FlowBuilderInfo(String id, String className, Set<FlowElementAttribute> attributes) {
 		Assert.hasText(className, "The fully-qualified FlowBuilder class name is required");
 		this.className = className;
 		setId(id);
-		this.attributes = (attributes != null ? attributes : Collections.emptySet());
+		this.attributes = attributes != null ? attributes : Collections.emptySet();
 	}
 
 	private void setId(String id) {

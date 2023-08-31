@@ -40,10 +40,10 @@ public class ActionTransitionCriteria implements TransitionCriteria {
 	 */
 	private String[] trueEventIds = new String[] { "success", "yes", "true" };
 
-	/**
-	 * The action to execute when the criteria is tested, annotated with usage attributes.
-	 */
-	private Action action;
+    /**
+     * The action to execute when the criteria is tested, annotated with usage attributes.
+     */
+    private final Action action;
 
 	/**
 	 * Create action transition criteria delegating to the specified action.

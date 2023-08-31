@@ -34,26 +34,26 @@ import org.junit.jupiter.api.Test;
  */
 public class StringKeyedMapAdapterTests {
 
-	private Map<String, String> contents = new HashMap<>();
+    private final Map<String, String> contents = new HashMap<>();
 
-	private StringKeyedMapAdapter<String> map = new StringKeyedMapAdapter<String>() {
+    private final StringKeyedMapAdapter<String> map = new StringKeyedMapAdapter<>() {
 
-		protected String getAttribute(String key) {
-			return contents.get(key);
-		}
+        protected String getAttribute(String key) {
+            return contents.get(key);
+        }
 
-		protected Iterator<String> getAttributeNames() {
-			return contents.keySet().iterator();
-		}
+        protected Iterator<String> getAttributeNames() {
+            return contents.keySet().iterator();
+        }
 
-		protected void removeAttribute(String key) {
-			contents.remove(key);
-		}
+        protected void removeAttribute(String key) {
+            contents.remove(key);
+        }
 
-		protected void setAttribute(String key, String value) {
-			contents.put(key, value);
-		}
-	};
+        protected void setAttribute(String key, String value) {
+            contents.put(key, value);
+        }
+    };
 
 	@Test
 	public void testGetPutRemove() {

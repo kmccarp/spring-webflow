@@ -22,10 +22,10 @@ package org.springframework.binding.method;
  */
 public class InvalidMethodKeyException extends RuntimeException {
 
-	/**
-	 * The method key that could not be resolved.
-	 */
-	private MethodKey methodKey;
+    /**
+     * The method key that could not be resolved.
+     */
+    private final MethodKey methodKey;
 
 	/**
 	 * Creates an exception signaling an invalid method signature.

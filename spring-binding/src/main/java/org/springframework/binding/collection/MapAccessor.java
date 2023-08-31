@@ -28,10 +28,10 @@ import org.springframework.util.Assert;
  */
 public class MapAccessor<K, V> implements MapAdaptable<K, V> {
 
-	/**
-	 * The target map.
-	 */
-	private Map<K, V> map;
+    /**
+     * The target map.
+     */
+    private final Map<K, V> map;
 
 	/**
 	 * Creates a new attribute map accessor.
