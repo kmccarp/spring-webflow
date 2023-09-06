@@ -33,21 +33,21 @@ import org.springframework.util.Assert;
  */
 class DispatchMethodInvoker {
 
-	/**
-	 * The target object to dispatch to.
-	 */
-	private Object target;
+    /**
+     * The target object to dispatch to.
+     */
+    private final Object target;
 
-	/**
-	 * The parameter types describing the dispatch method signature.
-	 */
-	private Class<?>[] parameterTypes;
+    /**
+     * The parameter types describing the dispatch method signature.
+     */
+    private final Class<?>[] parameterTypes;
 
 	/**
 	 * The resolved method cache.
 	 */
 	@SuppressWarnings("serial")
-	private Map<String, Method> methodCache = new AbstractCachingMapDecorator<String, Method>() {
+	private Map<String, Method> methodCache = new AbstractCachingMapDecorator<>() {
 		public Method create(String key) {
 			String methodName = key;
 			try {

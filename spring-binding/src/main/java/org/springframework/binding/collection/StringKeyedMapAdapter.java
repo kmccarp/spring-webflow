@@ -77,7 +77,7 @@ public abstract class StringKeyedMapAdapter<V> implements Map<String, V> {
 	}
 
 	public V put(String key, V value) {
-		String stringKey = String.valueOf(key);
+		String stringKey = key;
 		V previousValue = getAttribute(stringKey);
 		setAttribute(stringKey, value);
 		return previousValue;

@@ -34,10 +34,10 @@ import org.springframework.webflow.execution.FlowExecutionException;
  */
 public class FlowExecutionExceptionHandlerSet {
 
-	/**
-	 * The set of exception handlers.
-	 */
-	private List<FlowExecutionExceptionHandler> exceptionHandlers = new LinkedList<>();
+    /**
+     * The set of exception handlers.
+     */
+    private final List<FlowExecutionExceptionHandler> exceptionHandlers = new LinkedList<>();
 
 	/**
 	 * Add a state exception handler to this set.

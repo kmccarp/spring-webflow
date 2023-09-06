@@ -24,20 +24,20 @@ import org.springframework.util.Assert;
  */
 class FlowElementAttribute {
 
-	/**
-	 * The name of the attribute.
-	 */
-	private String name;
+    /**
+     * The name of the attribute.
+     */
+    private final String name;
 
-	/**
-	 * The value of the attribute before type-conversion.
-	 */
-	private String value;
+    /**
+     * The value of the attribute before type-conversion.
+     */
+    private final String value;
 
-	/**
-	 * The attribute type, optional, but necessary for type conversion.
-	 */
-	private String type;
+    /**
+     * The attribute type, optional, but necessary for type conversion.
+     */
+    private final String type;
 
 	public FlowElementAttribute(String name, String value, String type) {
 		Assert.hasText(name, "The name is required");
