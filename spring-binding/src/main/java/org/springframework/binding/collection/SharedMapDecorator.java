@@ -30,10 +30,10 @@ import org.springframework.core.style.ToStringCreator;
  */
 public class SharedMapDecorator<K, V> implements SharedMap<K, V>, Serializable {
 
-	/**
-	 * The wrapped, target map.
-	 */
-	private Map<K, V> map;
+    /**
+     * The wrapped, target map.
+     */
+    private final Map<K, V> map;
 
 	/**
 	 * Creates a new shared map decorator.

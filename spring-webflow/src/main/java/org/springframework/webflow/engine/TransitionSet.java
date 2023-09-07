@@ -33,10 +33,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class TransitionSet implements Iterable<Transition> {
 
-	/**
-	 * The set of transitions.
-	 */
-	private List<Transition> transitions = new LinkedList<>();
+    /**
+     * The set of transitions.
+     */
+    private final List<Transition> transitions = new LinkedList<>();
 
 	/**
 	 * Add a transition to this set.

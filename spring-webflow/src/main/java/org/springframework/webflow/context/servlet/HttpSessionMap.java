@@ -34,10 +34,10 @@ import org.springframework.webflow.core.collection.CollectionUtils;
  */
 public class HttpSessionMap extends StringKeyedMapAdapter<Object> implements SharedMap<String, Object> {
 
-	/**
-	 * The wrapped HTTP request, providing access to the session.
-	 */
-	private HttpServletRequest request;
+    /**
+     * The wrapped HTTP request, providing access to the session.
+     */
+    private final HttpServletRequest request;
 
 	/**
 	 * Create a map wrapping the session of given request.
@@ -90,7 +90,7 @@ public class HttpSessionMap extends StringKeyedMapAdapter<Object> implements Sha
 	protected Iterator<String> getAttributeNames() {
 		HttpSession session = getSession();
 		return (session == null) ?
-				CollectionUtils.<String>emptyIterator() : CollectionUtils.toIterator(session.getAttributeNames());
+				CollectionUtils.emptyIterator() : CollectionUtils.toIterator(session.getAttributeNames());
 	}
 
 	public Object getMutex() {

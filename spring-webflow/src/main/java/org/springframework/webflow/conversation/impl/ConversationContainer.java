@@ -42,14 +42,14 @@ public class ConversationContainer implements Serializable {
 
 	private static final Log logger = LogFactory.getLog(ConversationContainer.class);
 
-	/** Maximum number of conversations in this container. -1 for unlimited. */
-	private int maxConversations;
+    /** Maximum number of conversations in this container. -1 for unlimited. */
+    private final int maxConversations;
 
-	/** The key of this conversation container in the session. */
-	private String sessionKey;
+    /** The key of this conversation container in the session. */
+    private final String sessionKey;
 
-	/** The contained conversations. A list of {@link ContainedConversation} objects. */
-	private List<ContainedConversation> conversations;
+    /** The contained conversations. A list of {@link ContainedConversation} objects. */
+    private final List<ContainedConversation> conversations;
 
 	/** The sequence for unique conversation identifiers within this container. */
 	private int conversationIdSequence;
