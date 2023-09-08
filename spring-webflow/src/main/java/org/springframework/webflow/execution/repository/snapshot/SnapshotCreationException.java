@@ -25,10 +25,10 @@ import org.springframework.webflow.execution.repository.FlowExecutionRepositoryE
  */
 public class SnapshotCreationException extends FlowExecutionRepositoryException {
 
-	/**
-	 * The flow execution that could not be snapshotted.
-	 */
-	private FlowExecution flowExecution;
+    /**
+     * The flow execution that could not be snapshotted.
+     */
+    private final FlowExecution flowExecution;
 
 	/**
 	 * Creates a new snapshot creation exception.

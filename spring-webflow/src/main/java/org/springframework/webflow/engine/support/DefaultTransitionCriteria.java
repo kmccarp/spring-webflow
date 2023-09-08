@@ -30,10 +30,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class DefaultTransitionCriteria implements TransitionCriteria {
 
-	/**
-	 * The expression evaluator to use.
-	 */
-	private Expression expression;
+    /**
+     * The expression evaluator to use.
+     */
+    private final Expression expression;
 
 	/**
 	 * Create a new expression based transition criteria object.
