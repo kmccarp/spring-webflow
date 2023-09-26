@@ -25,10 +25,10 @@ import org.springframework.webflow.core.FlowException;
  */
 public class FlowDefinitionConstructionException extends FlowException {
 
-	/**
-	 * The id of the flow that could not be constructed.
-	 */
-	private String flowDefinitionId;
+    /**
+     * The id of the flow that could not be constructed.
+     */
+    private final String flowDefinitionId;
 
 	/**
 	 * Creates an exception indicating a flow definition could not be constructed.

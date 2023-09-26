@@ -29,10 +29,10 @@ import org.springframework.webflow.execution.View;
  */
 public class RenderAction extends AbstractAction {
 
-	/**
-	 * The expression for setting the scoped attribute value.
-	 */
-	private Expression[] fragmentExpressions;
+    /**
+     * The expression for setting the scoped attribute value.
+     */
+    private final Expression[] fragmentExpressions;
 
 	/**
 	 * Creates a new render action.

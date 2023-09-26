@@ -48,10 +48,10 @@ public class CompositeAction extends AbstractAction {
 	 */
 	public static final String ACTION_RESULTS_ATTRIBUTE_NAME = "actionResults";
 
-	/**
-	 * The actions to execute.
-	 */
-	private Action[] actions;
+    /**
+     * The actions to execute.
+     */
+    private final Action[] actions;
 
 	/**
 	 * Should execution stop if one action returns an error event?

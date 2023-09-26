@@ -34,10 +34,10 @@ public class FlowDefinitionRegistryImpl implements FlowDefinitionRegistry {
 
 	private static final Log logger = LogFactory.getLog(FlowDefinitionRegistryImpl.class);
 
-	/**
-	 * The map of loaded Flow definitions maintained in this registry.
-	 */
-	private Map<String, FlowDefinitionHolder> flowDefinitions;
+    /**
+     * The map of loaded Flow definitions maintained in this registry.
+     */
+    private final Map<String, FlowDefinitionHolder> flowDefinitions;
 
 	/**
 	 * An optional parent flow definition registry.
