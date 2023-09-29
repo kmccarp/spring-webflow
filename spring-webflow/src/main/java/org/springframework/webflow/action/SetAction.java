@@ -29,15 +29,15 @@ import org.springframework.webflow.execution.ScopeType;
  */
 public class SetAction extends AbstractAction {
 
-	/**
-	 * The expression for setting the scoped attribute value.
-	 */
-	private Expression nameExpression;
+    /**
+     * The expression for setting the scoped attribute value.
+     */
+    private final Expression nameExpression;
 
-	/**
-	 * The expression for resolving the scoped attribute value.
-	 */
-	private Expression valueExpression;
+    /**
+     * The expression for resolving the scoped attribute value.
+     */
+    private final Expression valueExpression;
 
 	/**
 	 * Creates a new set attribute action.

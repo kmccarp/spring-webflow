@@ -32,15 +32,15 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public abstract class TransitionableState extends State implements TransitionableStateDefinition {
 
-	/**
-	 * The set of possible transitions out of this state.
-	 */
-	private TransitionSet transitions = new TransitionSet();
+    /**
+     * The set of possible transitions out of this state.
+     */
+    private final TransitionSet transitions = new TransitionSet();
 
-	/**
-	 * An actions to execute when exiting this state.
-	 */
-	private ActionList exitActionList = new ActionList();
+    /**
+     * An actions to execute when exiting this state.
+     */
+    private final ActionList exitActionList = new ActionList();
 
 	/**
 	 * Create a new transitionable state.

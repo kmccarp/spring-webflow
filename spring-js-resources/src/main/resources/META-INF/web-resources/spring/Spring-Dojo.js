@@ -15,11 +15,7 @@
  */
 dojo.declare("Spring.DefaultEquals", null, {
 	equals : function(/*Object*/other){
-		if (other.declaredClass && other.declaredClass == this.declaredClass) {
-			return true;
-		}else{
-			return false;
-		}
+        return other.declaredClass && other.declaredClass == this.declaredClass
 	}			
 });
 
@@ -30,7 +26,7 @@ dojo.declare("Spring.ElementDecoration", [Spring.AbstractElementDecoration, Spri
 		dojo.mixin(this, config);
 		this.element = dojo.byId(this.elementId);
 		this.elementId = dojo.isString(this.elementId) ? this.elementId : this.elementId.id;
-		if(this.widgetModule == "") {
+		if("".equals(this.widgetModule)) {
 			this.widgetModule = this.widgetType;
 		}
 		dojo.require(this.widgetModule);
@@ -52,7 +48,7 @@ dojo.declare("Spring.ElementDecoration", [Spring.AbstractElementDecoration, Spri
 			 * which is the reason for the code below.
 			 */
 			var datePattern = this.widgetAttrs['datePattern'];
-			if (datePattern && this.widgetType == 'dijit.form.DateTextBox') {
+			if (datePattern && 'dijit.form.DateTextBox'.equals(this.widgetType)) {
 				if (!this.widgetAttrs['value']) {
 					// Help dijit.form.DateTextBox parse the server side date value.
 					this.widgetAttrs['value'] = dojo.date.locale.parse(this.element.value, {selector : "date", datePattern : datePattern});
@@ -75,8 +71,8 @@ dojo.declare("Spring.ElementDecoration", [Spring.AbstractElementDecoration, Spri
 			for (var copyField in this.copyFields) {
 				copyField = this.copyFields[copyField];
 				if (!this.widgetAttrs[copyField] && this.element[copyField] &&
-				(typeof this.element[copyField] != 'number' ||
-				(typeof this.element[copyField] == 'number' && this.element[copyField] >= 0))) {
+				(!'number'.equals(typeof this.element[copyField]) ||
+				('number'.equals(typeof this.element[copyField]) && this.element[copyField] >= 0))) {
 					this.widgetAttrs[copyField] = this.element[copyField];
 				}
 			}
@@ -172,10 +168,10 @@ dojo.declare("Spring.AjaxEventDecoration", [Spring.AbstractAjaxEventDecoration, 
 	},
 	
 	submit : function(event){
-		if (this.sourceId == ""){
+		if ("".equals(this.sourceId)){
 			this.sourceId = this.elementId;
 		}
-		if(this.formId == ""){
+		if("".equals(this.formId)){
 			Spring.remoting.getLinkedResource(this.sourceId, this.params, this.popup);
 		} else {
 			if (this.allowed){
@@ -239,7 +235,7 @@ dojo.declare("Spring.RemotingHandler", Spring.AbstractRemotingHandler, {
 	
 	        // The ERROR function will be called in an error case.
 	        error: this.handleError
-        }, formMethod == "POST" ? true : false);	
+        }, "POST".equals(formMethod) ? true : false);	
 
 	},
 	
@@ -337,7 +333,7 @@ dojo.declare("Spring.RemotingHandler", Spring.AbstractRemotingHandler, {
 			
 			//Insert the new DOM nodes and update the Form's action URL
 			newNodes.forEach(function(item){
-				if (item.id != null && item.id != "") {
+				if (item.id != null && !"".equals(item.id)) {
 					var target = dijit.byId(item.id) ? dijit.byId(item.id).domNode : dojo.byId(item.id);
 					if (!target) {
 						console.error("An existing DOM elment with id '" + item.id + "' could not be found for replacement.");

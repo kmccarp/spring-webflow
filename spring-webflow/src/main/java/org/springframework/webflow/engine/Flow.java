@@ -115,58 +115,58 @@ public class Flow extends AnnotatedObject implements FlowDefinition {
 	 */
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	/**
-	 * An assigned flow identifier uniquely identifying this flow among all other flows.
-	 */
-	private String id;
+    /**
+     * An assigned flow identifier uniquely identifying this flow among all other flows.
+     */
+    private final String id;
 
-	/**
-	 * The set of state definitions for this flow.
-	 */
-	private Set<State> states = new LinkedHashSet<>(9);
+    /**
+     * The set of state definitions for this flow.
+     */
+    private final Set<State> states = new LinkedHashSet<>(9);
 
 	/**
 	 * The default start state for this flow.
 	 */
 	private State startState;
 
-	/**
-	 * The set of flow variables created by this flow.
-	 */
-	private Map<String, FlowVariable> variables = new LinkedHashMap<>();
+    /**
+     * The set of flow variables created by this flow.
+     */
+    private final Map<String, FlowVariable> variables = new LinkedHashMap<>();
 
 	/**
 	 * The mapper to map flow input attributes.
 	 */
 	private Mapper inputMapper;
 
-	/**
-	 * The list of actions to execute when this flow starts.
-	 * <p>
-	 * Start actions should execute with care as during startup a flow session has not yet fully initialized and some
-	 * properties like its "currentState" have not yet been set.
-	 */
-	private ActionList startActionList = new ActionList();
+    /**
+     * The list of actions to execute when this flow starts.
+     * <p>
+     * Start actions should execute with care as during startup a flow session has not yet fully initialized and some
+     * properties like its "currentState" have not yet been set.
+     */
+    private final ActionList startActionList = new ActionList();
 
-	/**
-	 * The set of global transitions that are shared by all states of this flow.
-	 */
-	private TransitionSet globalTransitionSet = new TransitionSet();
+    /**
+     * The set of global transitions that are shared by all states of this flow.
+     */
+    private final TransitionSet globalTransitionSet = new TransitionSet();
 
-	/**
-	 * The list of actions to execute when this flow ends.
-	 */
-	private ActionList endActionList = new ActionList();
+    /**
+     * The list of actions to execute when this flow ends.
+     */
+    private final ActionList endActionList = new ActionList();
 
 	/**
 	 * The mapper to map flow output attributes.
 	 */
 	private Mapper outputMapper;
 
-	/**
-	 * The set of exception handlers for this flow.
-	 */
-	private FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
+    /**
+     * The set of exception handlers for this flow.
+     */
+    private final FlowExecutionExceptionHandlerSet exceptionHandlerSet = new FlowExecutionExceptionHandlerSet();
 
 	/**
 	 * An optional application context hosting services needed by this flow.

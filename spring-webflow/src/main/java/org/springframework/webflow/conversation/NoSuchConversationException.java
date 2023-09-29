@@ -23,10 +23,10 @@ package org.springframework.webflow.conversation;
  */
 public class NoSuchConversationException extends ConversationException {
 
-	/**
-	 * The unique conversation identifier that was invalid.
-	 */
-	private ConversationId conversationId;
+    /**
+     * The unique conversation identifier that was invalid.
+     */
+    private final ConversationId conversationId;
 
 	/**
 	 * Create a new conversation lookup exception.

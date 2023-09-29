@@ -39,10 +39,10 @@ public abstract class AnnotatedObject implements Annotated {
 	 */
 	public static final String DESCRIPTION_PROPERTY = "description";
 
-	/**
-	 * Additional properties further describing this object. The properties set in this map may be arbitrary.
-	 */
-	private LocalAttributeMap<Object> attributes = new LocalAttributeMap<>();
+    /**
+     * Additional properties further describing this object. The properties set in this map may be arbitrary.
+     */
+    private final LocalAttributeMap<Object> attributes = new LocalAttributeMap<>();
 
 	// implementing Annotated
 

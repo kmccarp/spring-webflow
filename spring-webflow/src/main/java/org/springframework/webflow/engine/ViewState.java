@@ -40,20 +40,20 @@ import org.springframework.webflow.execution.ViewFactory;
  */
 public class ViewState extends TransitionableState {
 
-	/**
-	 * The list of actions to be executed before the view is rendered.
-	 */
-	private ActionList renderActionList = new ActionList();
+    /**
+     * The list of actions to be executed before the view is rendered.
+     */
+    private final ActionList renderActionList = new ActionList();
 
-	/**
-	 * A factory for creating and restoring the view rendered by this view state.
-	 */
-	private ViewFactory viewFactory;
+    /**
+     * A factory for creating and restoring the view rendered by this view state.
+     */
+    private final ViewFactory viewFactory;
 
-	/**
-	 * The set of view variables created by this view state.
-	 */
-	private Map<String, ViewVariable> variables = new LinkedHashMap<>();
+    /**
+     * The set of view variables created by this view state.
+     */
+    private final Map<String, ViewVariable> variables = new LinkedHashMap<>();
 
 	/**
 	 * Whether or not a redirect should occur before the view is rendered.
@@ -121,7 +121,7 @@ public class ViewState extends TransitionableState {
 	 * Returns whether this view state should request a flow execution redirect when entered.
 	 */
 	public boolean getRedirect() {
-		return (redirect == null) ? false : redirect;
+		return redirect == null ? false : redirect;
 	}
 
 	/**

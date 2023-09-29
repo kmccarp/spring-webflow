@@ -26,20 +26,20 @@ import org.springframework.core.style.ToStringCreator;
  */
 public class ConversationParameters implements Serializable {
 
-	/**
-	 * The conversation name.
-	 */
-	private String name;
+    /**
+     * The conversation name.
+     */
+    private final String name;
 
-	/**
-	 * The conversation caption.
-	 */
-	private String caption;
+    /**
+     * The conversation caption.
+     */
+    private final String caption;
 
-	/**
-	 * The conversation description.
-	 */
-	private String description;
+    /**
+     * The conversation description.
+     */
+    private final String description;
 
 	/**
 	 * Creates new conversation input parameters.
