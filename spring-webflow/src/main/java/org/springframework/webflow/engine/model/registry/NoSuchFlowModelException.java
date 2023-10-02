@@ -26,10 +26,10 @@ import org.springframework.webflow.core.FlowException;
  */
 public class NoSuchFlowModelException extends FlowException {
 
-	/**
-	 * The id of the flow model that could not be located.
-	 */
-	private String flowModelId;
+    /**
+     * The id of the flow model that could not be located.
+     */
+    private final String flowModelId;
 
 	/**
 	 * Creates an exception indicating a flow model could not be found.

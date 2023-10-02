@@ -26,10 +26,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class NotTransitionCriteria implements TransitionCriteria {
 
-	/**
-	 * The criteria to negate.
-	 */
-	private TransitionCriteria criteria;
+    /**
+     * The criteria to negate.
+     */
+    private final TransitionCriteria criteria;
 
 	/**
 	 * Create a new transition criteria object that will negate the result of given criteria object.

@@ -33,10 +33,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class MockTransitionCriteria implements TransitionCriteria, Serializable {
 
-	/**
-	 * The event id to match.
-	 */
-	private String eventId;
+    /**
+     * The event id to match.
+     */
+    private final String eventId;
 
 	/**
 	 * Whether or not to match case sensitively. Default is true.

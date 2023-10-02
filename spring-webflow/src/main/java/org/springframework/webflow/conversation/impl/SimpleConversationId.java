@@ -27,10 +27,10 @@ import org.springframework.webflow.conversation.ConversationManager;
  */
 public class SimpleConversationId extends ConversationId {
 
-	/**
-	 * The id value.
-	 */
-	private Serializable id;
+    /**
+     * The id value.
+     */
+    private final Serializable id;
 
 	/**
 	 * Creates a new simple conversation id.
