@@ -25,10 +25,10 @@ import org.springframework.webflow.core.FlowException;
  */
 public class NoSuchFlowDefinitionException extends FlowException {
 
-	/**
-	 * The id of the flow definition that could not be located.
-	 */
-	private String flowDefinitionId;
+    /**
+     * The id of the flow definition that could not be located.
+     */
+    private final String flowDefinitionId;
 
 	/**
 	 * Creates an exception indicating a flow definition could not be found.

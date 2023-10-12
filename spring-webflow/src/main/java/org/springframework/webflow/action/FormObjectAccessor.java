@@ -55,10 +55,10 @@ public class FormObjectAccessor {
 	 */
 	private static final String ERRORS_PREFIX = BindingResult.MODEL_KEY_PREFIX;
 
-	/**
-	 * The wrapped request context.
-	 */
-	private RequestContext context;
+    /**
+     * The wrapped request context.
+     */
+    private final RequestContext context;
 
 	/**
 	 * Creates a form object accessor that wraps the given context.

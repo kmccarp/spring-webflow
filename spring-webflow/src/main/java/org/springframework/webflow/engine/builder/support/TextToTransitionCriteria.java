@@ -46,10 +46,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 class TextToTransitionCriteria implements Converter {
 
-	/**
-	 * Context for flow builder services.
-	 */
-	private FlowBuilderContext flowBuilderContext;
+    /**
+     * Context for flow builder services.
+     */
+    private final FlowBuilderContext flowBuilderContext;
 
 	/**
 	 * Create a new converter that converts strings to transition criteria objects. Custom transition criteria will be

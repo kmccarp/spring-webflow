@@ -34,10 +34,10 @@ import org.springframework.webflow.execution.repository.FlowExecutionLock;
  */
 class ConversationBackedFlowExecutionLock implements FlowExecutionLock {
 
-	/**
-	 * The conversation to lock.
-	 */
-	private Conversation conversation;
+    /**
+     * The conversation to lock.
+     */
+    private final Conversation conversation;
 
 	/**
 	 * Creates a new conversation-backed flow execution lock.

@@ -29,15 +29,15 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class FlowVariable extends AnnotatedObject {
 
-	/**
-	 * The variable name.
-	 */
-	private String name;
+    /**
+     * The variable name.
+     */
+    private final String name;
 
-	/**
-	 * The value factory that provides this variable's value.
-	 */
-	private VariableValueFactory valueFactory;
+    /**
+     * The value factory that provides this variable's value.
+     */
+    private final VariableValueFactory valueFactory;
 
 	/**
 	 * Creates a new flow variable.

@@ -42,10 +42,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 class TextToTargetStateResolver implements Converter {
 
-	/**
-	 * Context for flow builder services.
-	 */
-	private FlowBuilderContext flowBuilderContext;
+    /**
+     * Context for flow builder services.
+     */
+    private final FlowBuilderContext flowBuilderContext;
 
 	/**
 	 * Create a new converter that converts strings to transition target state resolver objects. The given conversion

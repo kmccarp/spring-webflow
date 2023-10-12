@@ -27,15 +27,15 @@ import org.springframework.util.ObjectUtils;
  */
 public class Parameter {
 
-	/**
-	 * The class of the parameter, e.g "springbank.AccountNumber".
-	 */
-	private Class<?> type;
+    /**
+     * The class of the parameter, e.g "springbank.AccountNumber".
+     */
+    private final Class<?> type;
 
-	/**
-	 * The name of the parameter as an evaluatable expression, e.g "accountNumber".
-	 */
-	private Expression name;
+    /**
+     * The name of the parameter as an evaluatable expression, e.g "accountNumber".
+     */
+    private final Expression name;
 
 	/**
 	 * Create a new named parameter definition. Named parameters are capable of resolving parameter values (arguments)

@@ -21,10 +21,10 @@ import org.springframework.util.Assert;
 
 public class LiteralExpression implements Expression {
 
-	/**
-	 * The string literal.
-	 */
-	private String literal;
+    /**
+     * The string literal.
+     */
+    private final String literal;
 
 	/**
 	 * Create a literal expression for the given literal.

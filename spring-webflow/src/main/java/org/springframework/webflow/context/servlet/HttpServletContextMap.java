@@ -30,10 +30,10 @@ import org.springframework.webflow.core.collection.CollectionUtils;
  */
 public class HttpServletContextMap extends StringKeyedMapAdapter<Object> implements SharedMap<String, Object> {
 
-	/**
-	 * The wrapped servlet context.
-	 */
-	private ServletContext context;
+    /**
+     * The wrapped servlet context.
+     */
+    private final ServletContext context;
 
 	/**
 	 * Create a map wrapping given servlet context.

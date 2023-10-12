@@ -40,10 +40,10 @@ import org.springframework.webflow.execution.RequestContext;
  */
 public class ActionList implements Iterable<Action> {
 
-	/**
-	 * The lists of actions.
-	 */
-	private List<Action> actions = new LinkedList<>();
+    /**
+     * The lists of actions.
+     */
+    private final List<Action> actions = new LinkedList<>();
 
 	/**
 	 * Add an action to this list.

@@ -26,10 +26,10 @@ import org.springframework.core.style.ToStringCreator;
  */
 public class CompositeStringExpression implements Expression {
 
-	/**
-	 * The expression array.
-	 */
-	private Expression[] expressions;
+    /**
+     * The expression array.
+     */
+    private final Expression[] expressions;
 
 	/**
 	 * Creates a new composite string expression.
